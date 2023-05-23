@@ -1,0 +1,109 @@
+<!-- Banner -->
+
+
+
+<div class="banner" [style.backgroundImage]="'url(' + (latestMovies?.backdrop_path) + ')'">
+    <div class="content">
+        <h1 class="title">{{latestMovies?.title}}</h1>
+        <div class="banner_buttons" style="background-color: transparent;">
+            <button class="button text-white">Play</button>
+            <button class="button text-white">My List</button>
+        </div>
+        <h1 class="description">{{latestMovies?.overview}}</h1>
+    </div>
+    <div class="fade"></div>
+</div>
+
+
+
+
+
+<!-- action Movies -->
+
+<div class="row mt-2 pt-2 px-2 text-white" style="height: 420px;">
+    <h6>Action Movies</h6>
+    <div class="movieCard-scroll">
+        <div class="col-md-2 mt-3 movieCard" *ngFor="let movie of actionMovies.results">
+            <div class="card bg-dark" style="height:300px;margin-right: 25px;">
+                <img style="object-fit: contain;" src="{{movie.backdrop_path}}" class="card-img-top"(click)="playVideo(movie.id)">
+                <div class="card-body text-white">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p><span class="text-warning">Rating: </span>{{movie.vote_average}}</p>
+                    <p>Language: <span class="p-1"><b>{{movie.original_language}}</b></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="videoContainer" class="mt-2" style="position: relative;"></div>
+<!-- comedyMovies -->
+
+<div class="row mt-2 pt-2 px-2 text-white" style="height: 420px;">
+    <h6>Comedy Movies</h6>
+    <div class="movieCard-scroll">
+        <div class="col-md-2 mt-3 movieCard" *ngFor="let movie of comedyMovies.results;let i=index">
+            <div class="card bg-dark" style="height:300px;margin-right: 25px;">
+                <img style="object-fit: contain;" src="{{movie.backdrop_path}}" class="card-img-top" (click)="playVideo(movie.id)" >
+                <div class="card-body text-white">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p><span class="text-warning">Rating : </span>{{movie.vote_average}}</p>
+                    <p>Language : <span class="p-1"> <b>{{movie.original_language}}</b></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- horrorMovies -->
+
+<div class="row mt-2 pt-2 px-2 text-white" style="height: 420px;">
+    <h6>Horror Movies</h6>
+    <div class="movieCard-scroll">
+        <div class="col-md-2 mt-3 movieCard" *ngFor="let movie of horrorMovies.results;let i=index">
+            <div class="card bg-dark" style="height:300px;margin-right: 25px;">
+                <img style="object-fit: contain;" src="{{movie.backdrop_path}}" class="card-img-top" (click)="playVideo(movie.id)">
+                <div class="card-body text-white">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p><span class="text-warning">Rating : </span>{{movie.vote_average}}</p>
+                    <p>Language : <span class="p-1"> <b>{{movie.original_language}}</b></span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- romanceMovies -->
+
+<div class="row mt-2 pt-2 px-2 text-white" style="height: 420px;">
+        <h6>Romantic Movies</h6>
+        <div class="movieCard-scroll">
+    <div class="col-md-2 mt-3 movieCard" *ngFor="let movie of romanceMovies.results;let i=index">
+        <div class="card bg-dark"  style="height:300px;margin-right: 25px;">
+            <img style="object-fit: contain;" src="{{movie.backdrop_path}}" class="card-img-top" (click)="playVideo(movie.id)">
+            <div class="card-body text-white">
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p><span class="text-warning">Rating : </span>{{movie.vote_average}}</p>
+                <p>Language : <span class="p-1"> <b>{{movie.original_language}}</b></span></p>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- trendingMovies -->
+
+<div class="row mt-2 pt-2 px-2 text-white" style="height: 420px;">
+    <h6>Trending Movies</h6>
+    <div class="movieCard-scroll">
+    <div class="col-md-2 mt-3 movieCard" *ngFor="let movie of trendingMovies.results;let i=index">
+        <div class="card bg-dark" *ngIf="i<6" style="height:300px;margin-right: 25px;">
+            <img style="object-fit: contain;" src="{{movie.backdrop_path}}" class="card-img-top" (click)="playVideo(movie.id)">
+            <div class="card-body text-white">
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p><span class="text-warning">Rating : </span>{{movie.vote_average}}</p>
+                <p>Language : <span class="p-1"> <b>{{movie.original_language}}</b></span></p>
+            </div>
+
+        </div>
+    </div>
+</div>

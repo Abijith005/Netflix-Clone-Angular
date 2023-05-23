@@ -1,0 +1,23 @@
+.navbar .navbar-brand
+{
+    color: #E50914;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+    font-size:x-large;
+    color: #E50914;
+}
+
+.logo {
+    width: 200px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.nav-Content{
+      margin-top: 25px;
+
+  }

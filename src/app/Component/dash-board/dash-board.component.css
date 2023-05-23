@@ -1,0 +1,82 @@
+
+
+*{
+    overflow: hidden;
+    background-color: #000000;
+}
+
+
+.banner{
+    background-size: cover;
+    height: 600px;
+    color: white;
+
+    
+  
+}
+.content{
+    padding-top: 240px;
+    height: 400px;
+    padding-left: 30px;
+    background-color: transparent;
+}
+.title,.description{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3em;
+    background-color: transparent;
+    color: white;
+}
+.button{
+color: white;
+outline: none;
+border: none;
+font-weight: 700;
+border-radius: 5px;
+padding-left: 2rem;
+padding-right: 2rem;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+background-color: rgba(51,51,51,.5);
+cursor: pointer;
+margin-right: 1rem;
+}
+.button:hover{
+    color:#E50914 !important;
+    background-color: #e6e6e6;
+    transition: .4s;
+}
+.description{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 1rem;
+    height: 80px;
+    max-width: 360px;
+}
+.fade{
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111);
+
+}
+
+.movieCard:hover{
+    transform: scale(1.1);
+    transition: transform .3s ease-out;
+    filter: brightness(1.5);    
+
+}
+
+
+.movieCard-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+
+
+
+
